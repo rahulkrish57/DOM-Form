@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+</head>
+<body>
+    <div class="container" style="padding: 50px;">
+        <div class="row">
+            <form class="formclass">
+                <div class="col">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                </div>
+
+                <div class="col">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+                </div>
+
+                <div class="col">
+                    <label for="gen">Gender</label>
+                    <label for="male">Male</label>
+                    <input type="radio"id="male" name="gen" value="Male">
+                    <label for="female">Female</label>
+                    <input type="radio"id="female" name="gen" value="Female">
+                </div>
+            
+                <div class="col">
+                    <label for="dish">Fav Dishes Min:2</label>
+                    <input type="checkbox" id="idly" name="dish" value="idly"><label for="idly">idly</label>
+                    <input type="checkbox" id="dhosa" name="dish" value="dhosa"><label for="dhosa">dhosa</label>
+                    <input type="checkbox" id="vadai" name="dish" value="vadai"><label for="vadai">vadai</label>
+                    <input type="checkbox" id="sambhar" name="dish"  value="sambhar"><label for="sambhar">sambhar</label>
+                </div>
+
+                <div class="col">
+                    <label for="add">Address</label>
+                    <input type="text" id="add" name="add" placeholder="Address" required>
+                </div>
+
+                <div class="col">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="City" required>
+                </div>
+
+                <div class="col">
+                    <label for="state">State</label>
+                    <select class="form-select" id="state">
+                        <option selected disabled>Select</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Karnataka">Karnataka</option>
+                    </select> 
+                </div>
+
+                <div class="col">
+                    <label for="country">Country</label>
+                    <select class="form-select" id="country">
+                        <option selected disabled>Select</option>
+                        <option value="India">India</option>
+                        <option value="Nepal">Nepal</option>
+                    </select> 
+                </div>
+                <div class="col">
+                    <button type="submit" id = "mySubmit" class="btn btn-primary" onclick="myFunc()">submit</button>
+                </div>
+                <div class="col">
+                    <button type="reset" class="btn btn-success">Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+<script src="default.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>
