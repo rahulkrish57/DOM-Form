@@ -1,0 +1,111 @@
+let tableRow = createElem("div","row");
+
+let tableCol = createElem("div","col");
+
+let table = createElem("table", "table");
+
+let thead = createElem("thead");
+ thead.innerHTML = `<tr>
+    <th scope="col">First Name</th>
+    <th scope="col">Last Name</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Fav Dishes</th>
+    <th scope="col">Address</th>
+    <th scope="col">City</th>
+    <th scope="col">State</th>
+    <th scope="col">Country</th>
+    </tr>`
+
+let tbody = createElem("tbody");
+
+let container = document.querySelector(".container");
+
+table.append(thead,tbody);
+tableCol.append(table);
+container.append(table);
+
+function createElem(ele, ele_class = "") {
+    let element = document.createElement(ele);
+    element.setAttribute("class", ele_class);
+    return element;
+}
+
+function myFunc(){
+document.getElementById("mySubmit").addEventListener("click", function(event){
+event.preventDefault()
+});
+
+let x = document.querySelector("#fname");
+y = x.value;
+console.log(y);
+
+let x1 = document.querySelector("#lname");
+y1 = x1.value;
+console.log(y1);
+
+let x2 = document.querySelector("#male");
+let x3 = document.querySelector("#female");
+let y2 = x2.checked ? x2.value : x3.checked ? x3.value : null;
+console.log(y2);
+
+
+let x4 = document.querySelectorAll("input[type='checkbox']:checked");
+let food = []
+if(x4.length > 1 ) 
+{
+    for (let i = 0; i < x4.length; i++)
+    {
+        food.push(x4[i].value);
+    }
+    /*console.log(food);
+    let foods = JSON.stringify(food);
+    console.log(foods);*/
+    food.forEach((element) => {
+        console.log(element);
+    })
+} else{ alert("choose more dishes")}
+
+let x5 = document.querySelector("#add");
+let y3 = x5.value;
+console.log(y3);
+
+let x6 = document.querySelector("#city");
+let y4 = x6.value;
+console.log(y4);
+
+let x7 = document.querySelector("#state");
+let y5 = x7.value;
+console.log(y5);
+
+let x8 = document.querySelector("#country");
+let y6 = x8.value;
+console.log(y6);
+
+if (
+  y.length !== 0 &&
+  y1.length !== 0 &&
+  y2 !== null &&
+  y3.length !== 0 &&
+  y4.length !== 0 &&
+  y5 !== "select" &&
+  y6 !== "select" &&
+  food.length > 0
+){
+let tbodyTr = createElem("tr");
+tbodyTr.innerHTML = `<tr>
+<td>${y}</td>
+<td>${y1}</td>
+<td>${y2}</td>
+<td>${elements.join(', ')}</td>
+<td>${y3}</td>
+<td>${y4}</td>
+<td>${y5}</td>
+<td>${y6}</td>
+</tr>`
+tbody.append(tbodyTr);
+
+}else {
+alert("Fill all details")   
+}
+
+}
